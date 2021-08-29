@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sports Db</title>
+    <link
+      href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body class="bg-indigo-900">
+    <section class="flex justify-center">
+      <div>
+        <h1 class="text-4xl font-bold mt-12 text-white">
+          Search your Favorite Team
+        </h1>
+        <input
+          id="search-field"
+          class="border w-3/4 mt-4 h-10 border-2 border-gray-300 rounded p-2"
+          type="text"
+          placeholder="search your team by Name"
+        />
+        <button
+          onclick="searchTeamName()"
+          class="p-2 bg-green-500 rounded text-white font-bold"
+        >
+          Search
+        </button>
+      </div>
+    </section>
+    <!-- 
+      display message
+     -->
+    <p
+      id="display-message"
+      class="text-center mt-2 text-red-900"
+      style="display: none"
+    >
+      please enter a team name!!
+    </p>
+    <!-- display details -->
+    <section id="load-details" class="m-12">
+      <!-- <div class="w-1/4 h-36 border-2 border-white p-4 rounded">
+        <img src="" alt="" />
+        <h2 class="text-2xl text-white mb-8">Hello</h2>
+
+        <a class="p-2 bg-green-500 rounded text-white font-bold" href=""
+          >Twitter</a
+        >
+        <a class="p-2 bg-green-500 rounded text-white font-bold" href=""
+          >Website</a
+        >
+      </div> -->
+    </section>
+
+    <!-- display Team -->
+    <div id="display-team" class="grid grid-cols-3 gap-4 mt-12 m-8"></div>
+    <!-- 
+  loading
+     -->
+    <div id="spinner"></div>
+    <script src="script.js"></script>
+  </body>
+</html>
